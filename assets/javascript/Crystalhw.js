@@ -67,15 +67,16 @@ $(document).ready(function () {
         function finishConditions() {
             if (userTotal == randomNumb) {
                 wins++;
-                document.getElementById("wins").innerHTML = "Winner winner chicken dinner";
-                $("#winsScore").text("Wins" + wins);
+                document.getElementById("wins").innerHTML = "Winner";
+                $("#wins").text("Wins" + wins);
                 alert("Winner winner chicken dinner")
                 reset();
+                console.log("ONCE FINISHED", userTotal);
 
             } else if (userTotal > randomNumb) {
                 losses++;
                 $("#finishingMessage").text("No soup for you!");
-                $("#lossesScore").text("Losses" + losses);
+                $("#losses").text("Losses" + losses);
                 alert("No soup for you! Try again.");
                 reset();
 
@@ -87,7 +88,7 @@ $(document).ready(function () {
 
         function reset() {
             userTotal = 0;
-            $("totalScore").text(userTotal);
+            $("#userTotal").text("Your Number:" + userTotal);
             randomNumb = Math.floor(Math.random() * 102 + 19);
             $("randomNumber").text(randomNumb);
 
