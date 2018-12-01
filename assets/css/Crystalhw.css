@@ -1,0 +1,26 @@
+
+
+.container {
+
+    background-color: rgba(141, 79, 8, 0.78);
+    color: rgb(20, 53, 82);
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+h1{
+
+    color: rgb(20, 53, 82);
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    font-size: 90px;
+}
+
+.pics {
+
+    width: 200px;
+    height: 200px;
+
+}
