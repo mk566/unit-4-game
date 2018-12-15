@@ -39,7 +39,7 @@ $(document).ready(function () {
     // Trophy2
     $("#basketball").click(function () {
         userTotal = userTotal + basketball;
-        document.getElementById("userTotal").innerHTML = "Your Number:" + userTotal; 
+        document.getElementById("userTotal").innerHTML = "Your Number:" + userTotal;
         finishConditions();
         console.log(basketball, "value of basketball trophy")
 
@@ -62,42 +62,42 @@ $(document).ready(function () {
     });
 
 
-        // Setting up the conditions to finish the game
+    // Setting up the conditions to finish the game
 
-        function finishConditions() {
-            if (userTotal == randomNumb) {
-                wins++;
-                document.getElementById("wins").innerHTML = "Winner";
-                $("#wins").text("Wins" + wins);
-                alert("Winner winner chicken dinner")
-                reset();
-                console.log("ONCE FINISHED", userTotal);
+    function finishConditions() {
+        if (userTotal == randomNumb) {
+            wins++;
+            document.getElementById("wins").innerHTML = "Winner";
+            $("#wins").text("Wins" + wins);
+            alert("Winner winner chicken dinner")
+            reset();
+            console.log("ONCE FINISHED", userTotal);
 
-            } else if (userTotal > randomNumb) {
-                losses++;
-                $("#finishingMessage").text("No soup for you!");
-                $("#losses").text("Losses" + losses);
-                alert("No soup for you! Try again.");
-                reset();
+        } else if (userTotal > randomNumb) {
+            losses++;
+            $("#finishingMessage").text("No soup for you!");
+            $("#losses").text("Losses" + losses);
+            alert("No soup for you! Try again.");
+            reset();
 
-            } 
-     
         }
 
-        // Reset Function
+    }
 
-        function reset() {
-            userTotal = 0;
-            $("#userTotal").text("Your Number:" + userTotal);
-            randomNumb = Math.floor(Math.random() * 102 + 19);
-            $("randomNumber").text(randomNumb);
+    // Reset Function
 
-
-            football = Math.floor(Math.random() * 12 + 1);
-            basketball = Math.floor(Math.random() * 12 + 1);
-            soccer = Math.floor(Math.random() * 12 + 1);
-            baseball = Math.floor(Math.random() * 12 + 1);
-        }
+    function reset() {
+        userTotal = 0;
+        $("#userTotal").text("Your Number:" + userTotal);
+        randomNumb = Math.floor(Math.random() * 102 + 19);
+        $("randomNumber").text(randomNumb);
 
 
-    });
+        football = Math.floor(Math.random() * 12 + 1);
+        basketball = Math.floor(Math.random() * 12 + 1);
+        soccer = Math.floor(Math.random() * 12 + 1);
+        baseball = Math.floor(Math.random() * 12 + 1);
+    }
+
+
+});
